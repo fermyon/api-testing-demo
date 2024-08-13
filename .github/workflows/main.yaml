@@ -30,8 +30,8 @@ jobs:
     - name: Run Spin app
       run: make run
 
-    - name: wait for 10s
-      run: sleep 10
+    - name: wait for 1s
+      run: sleep 1
 
     - name: Run Hurl tests
       run: make test
