@@ -30,7 +30,7 @@ jobs:
     - name: Run Spin app
       run: make run
 
-    - name: wait for 1s
+    - name: Wait for 1s
       run: sleep 1
 
     - name: Run Hurl tests
