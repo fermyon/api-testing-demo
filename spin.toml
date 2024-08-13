@@ -10,11 +10,11 @@ description = ""
 route = "/..."
 component = "api-testing-demo"
 
-[component.api-endpoint-testing-demo]
+[component.api-testing-demo]
 source = "main.wasm"
 sqlite_databases = ["default"]
 allowed_outbound_hosts = []
 
-[component.api-endpoint-testing-demo.build]
+[component.api-testing-demo.build]
 command = "tinygo build -target=wasi -gc=leaking -no-debug -o main.wasm main.go"
 watch = ["**/*.go", "go.mod"]
