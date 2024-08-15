@@ -1,6 +1,6 @@
 # Overview
 
-This repository is a companion to a [blog post](http://link_here) which walks through how to use Spin's built-in SQLite database, Hurl, and Github Actions to run automated tests against an API built with Spin. 
+This repository is a companion to a [blog post](http://link_here) which walks through how to use Spin's built-in SQLite database, Hurl, and Github Actions to run automated tests against an API built with Spin.
 
 # Usage
 
@@ -8,6 +8,8 @@ This repository is a companion to a [blog post](http://link_here) which walks th
 
 - Latest version of [Spin](https://developer.fermyon.com/spin/v2/install)
 - Latest version of [TinyGo](https://tinygo.org/getting-started/install/)
+- Latest version of [Go](https://go.dev/dl/) supported by TinyGo
+  - This can be checked by running `tinygo version`. At the time of this post's publishing, the latest supported version of Go is `1.22`.
 - Latest version of [Hurl](https://hurl.dev/docs/installation.html)
 
 ## Building, Running, and Testing
