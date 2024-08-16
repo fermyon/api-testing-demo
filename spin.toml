@@ -1,0 +1,20 @@
+spin_manifest_version = 2
+
+[application]
+name = "api-testing-demo"
+version = "0.1.0"
+authors = ["Andrew Steurer <andrew.steurer@fermyon.com>"]
+description = ""
+
+[[trigger.http]]
+route = "/..."
+component = "api-testing-demo"
+
+[component.api-testing-demo]
+source = "main.wasm"
+sqlite_databases = ["default"]
+allowed_outbound_hosts = []
+
+[component.api-testing-demo.build]
+command = "tinygo build -target=wasi -gc=leaking -no-debug -o main.wasm main.go"
+watch = ["**/*.go", "go.mod"]

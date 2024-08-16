@@ -1,0 +1,42 @@
+name: Test the database client
+on: [push, pull_request]
+
+env:
+  SPIN_VERSION: "v2.7.0"
+
+jobs:
+  test-spin-app:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install TinyGo
+      uses: rajatjindal/setup-actions/tinygo@v0.0.1
+      with:
+        version: "v0.32.0"
+
+    - name: Install Spin
+      uses: rajatjindal/setup-actions/spin@main
+      with:
+        version: ${{ env.SPIN_VERSION }}
+
+    - name: Install Hurl
+      uses: gacts/install-hurl@v1
+
+    - name: Build Spin app
+      run: make build
+
+    - name: Run Spin app
+      run: make run
+
+    - name: Wait for 1s
+      run: sleep 1
+
+    - name: Run Hurl tests
+      run: make test
+
+    - name: Stop Spin app
+      run: make rm
+
+
