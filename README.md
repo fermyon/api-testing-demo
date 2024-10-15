@@ -1,6 +1,6 @@
 # Overview
 
-This repository is a companion to a [blog post](http://link_here) which walks through how to use Spin's built-in SQLite database, Hurl, and Github Actions to run automated tests against an API built with Spin.
+This repository is a companion to a [blog post](https://www.fermyon.com/blog/api-testing-demo) which walks through how to use Spin's built-in SQLite database, Hurl, and Github Actions to run automated tests against an API built with Spin.
 
 # Usage
 
